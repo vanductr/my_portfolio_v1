@@ -1,21 +1,26 @@
 import React from "react";
 import "./Hero.css";
-import profile_img from "../../assets/profile_img.svg";
+import profile_img from "../../assets/avatar.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div id="home" className="hero">
       <img src={profile_img} alt="" />
       <h1>
         {" "}
         <span>Tôi là Văn Đức,</span> nhà phát triển Website.
       </h1>
       <p>
-        Tôi là một nhà phát triển frontend đến từ California, Hoa Kỳ với 10 năm
-        kinh nghiệm làm việc tại nhiều công ty như Microsoft, Tesla và Apple.
+        Tôi là một nhà phát triển website ở vị trí Full Stack đến từ Hà Nội,
+        Việt Nam. Tôi sử dụng Tiếng Nhật như ngôn ngữ thứ 2 sau tiếng Mẹ đẻ.
       </p>
       <div className="hero-action">
-        <div className="hero-connect">Liên hệ với tôi</div>
+        <div className="hero-connect">
+          <AnchorLink className="anchor-link" offset={50} href="#contact">
+            Liên hệ với tôi
+          </AnchorLink>
+        </div>
         <div className="hero-resume">Lý lịch của tôi</div>
       </div>
     </div>
